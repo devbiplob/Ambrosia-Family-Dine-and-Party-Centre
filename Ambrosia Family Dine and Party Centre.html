@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ambrosia Family Dine and Party Centre</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--teal:#0f2a2e;--deep:#16393e;--gold:#f2b632;--rose:#e8506a;--ivory:#fff8ec;--sea:#9fc9c3;
+ color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--teal);color:var(--ivory);font-family:Figtree,system-ui,sans-serif;font-size:1.05rem;line-height:1.65}
+h1,h2,h3{font-family:Gloock,Georgia,serif;font-weight:400;margin:0;line-height:1.05}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;justify-content:space-between;align-items:center;padding:.8rem 1.4rem;background:rgba(15,42,46,.94);backdrop-filter:blur(8px)}
+nav b{font-family:Gloock,serif;font-weight:400;font-size:1.35rem;color:var(--gold)}
+nav div a{margin-left:1.4rem;text-decoration:none;color:var(--sea)}
+nav div a:hover{color:var(--ivory)}
+.hero{position:relative;overflow:hidden;min-height:90vh;display:grid;align-items:center;padding:4rem 1.4rem;
+ background:radial-gradient(circle at 85% 20%,#1f5058 0,transparent 45%),var(--teal)}
+.ring{position:absolute;right:-8vw;top:50%;width:min(60vw,560px);aspect-ratio:1;transform:translateY(-50%);border-radius:50%;
+ border:2px solid var(--gold);opacity:.55;animation:spin 40s linear infinite}
+.ring::before,.ring::after{content:"";position:absolute;border-radius:50%}
+.ring::before{inset:9%;border:2px dashed var(--rose)}
+.ring::after{inset:20%;background:radial-gradient(circle,var(--gold) 0 3px,transparent 4px) 0 0/34px 34px;opacity:.5}
+@keyframes spin{to{transform:translateY(-50%) rotate(360deg)}}
+.hero-in{position:relative;max-width:1000px;margin:auto;width:100%}
+.hero h1{font-size:clamp(3.2rem,11vw,8rem);max-width:9ch}
+.hero h1 small{display:block;font-size:.3em;color:var(--gold);margin-top:1rem;max-width:22ch}
+.hero p{max-width:40ch;font-size:1.2rem;color:var(--sea);margin:1.4rem 0 2rem}
+.btn{display:inline-block;padding:.85rem 1.8rem;background:var(--gold);color:var(--teal);font-weight:700;text-decoration:none;border-radius:6px;margin:0 .6rem .6rem 0}
+.btn.alt{background:transparent;color:var(--ivory);border:2px solid var(--rose)}
+.btn:hover{filter:brightness(1.1)}
+section{padding:5rem 1.4rem}
+.wrap{max-width:1000px;margin:auto}
+h2{font-size:clamp(2.2rem,5.5vw,3.5rem);color:var(--gold);margin-bottom:1rem}
+.three{display:grid;gap:1.4rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:2rem}
+.three article{background:var(--deep);padding:1.8rem;border-radius:4px 28px 4px 28px}
+.three article:nth-child(2){border-radius:28px 4px 28px 4px}
+.three h3{font-size:1.6rem;margin-bottom:.5rem}
+.three p{margin:0;color:var(--sea)}
+.tabs{display:flex;flex-wrap:wrap;gap:.6rem;margin:1.5rem 0 2rem}
+.tabs button{font:inherit;font-weight:500;color:var(--ivory);background:var(--deep);border:2px solid transparent;padding:.55rem 1.2rem;border-radius:6px;cursor:pointer}
+.tabs button[aria-selected=true]{background:var(--rose);color:#fff}
+.items{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:0 3rem}
+.items li{padding:1rem 0;border-bottom:1px solid #2c5a60}
+.row{display:flex;gap:.8rem;align-items:baseline}
+.row h3{font-size:1.3rem}
+.row i{flex:1;border-bottom:2px dotted #3b6f76;transform:translateY(-4px)}
+.row span{color:var(--gold);font-weight:700}
+.items p{margin:.2rem 0 0;color:var(--sea);font-size:.97rem}
+.note{color:var(--sea);font-size:.92rem;margin-top:2rem}
+.party{background:var(--rose);color:#fff}
+.party h2{color:var(--ivory)}
+.party .three article{background:rgba(15,42,46,.9)}
+.party .three p{color:var(--sea)}
+.party>.wrap>p{max-width:55ch;font-size:1.15rem}
+.contact .three h3{color:var(--gold)}
+footer{text-align:center;padding:2rem 1rem;color:var(--sea);font-size:.92rem}
+@media(max-width:720px){nav div a:not(:last-child){display:none}}
+@media(prefers-reduced-motion:reduce){.ring{animation:none}}
+</style>
+</head>
+<body>
+<nav><b>Ambrosia</b><div><a href="#about">Dine</a><a href="#menu">Menu</a><a href="#party">Parties</a><a href="#contact">Contact</a></div></nav>
+
+<header class="hero">
+ <div class="ring" aria-hidden="true"></div>
+ <div class="hero-in">
+  <h1>Ambrosia<small>Family Dine and Party Centre</small></h1>
+  <p>Good food for the whole table, and a hall big enough for every celebration.</p>
+  <a class="btn" href="#menu">View the menu</a><a class="btn alt" href="#party">Book a party</a>
+ </div>
+</header>
+
+<section id="about">
+ <div class="wrap">
+  <h2>Food worth gathering for</h2>
+  <p style="max-width:58ch">Named for the food of the gods, Ambrosia is where families come to share a proper meal and where birthdays, engagements and reunions come to be remembered.</p>
+  <div class="three">
+   <article><h3>Family dining</h3><p>Generous plates, a comfortable room and space for every generation at one table.</p></article>
+   <article><h3>Party hall</h3><p>A private hall for birthdays, engagements, receptions and get-togethers.</p></article>
+   <article><h3>Catering</h3><p>Our kitchen can bring the menu to your event, big or small.</p></article>
+  </div>
+ </div>
+</section>
+
+<section id="menu" style="background:var(--deep)">
+ <div class="wrap">
+  <h2>The Menu</h2>
+  <div class="tabs" role="tablist" aria-label="Menu categories"></div>
+  <ul class="items" id="items" role="tabpanel"></ul>
+  <p class="note">Sample dishes and prices shown. Edit the MENU list at the top of the script to match your printed menu.</p>
+ </div>
+</section>
+
+<section id="party" class="party">
+ <div class="wrap">
+  <h2>Celebrate with us</h2>
+  <p>Tell us the occasion and the headcount. We handle the hall, the food and the decor so you can enjoy the day.</p>
+  <div class="three">
+   <article><h3>Birthdays</h3><p>Kids' parties and milestone birthdays with set menus and themed decor.</p></article>
+   <article><h3>Family functions</h3><p>Engagements, receptions and reunions for small groups or large ones.</p></article>
+   <article><h3>Corporate events</h3><p>Meetings, lunches and team celebrations with flexible seating.</p></article>
+  </div>
+ </div>
+</section>
+
+<section id="contact" class="contact">
+ <div class="wrap">
+  <h2>Visit or book</h2>
+  <div class="three">
+   <article><h3>Find us</h3><p>Add your street address and town here.</p></article>
+   <article><h3>Hours</h3><p>Add your opening hours here.</p></article>
+   <article><h3>Reservations</h3><p>Add your phone number and social links here.</p></article>
+  </div>
+ </div>
+</section>
+
+<footer>&copy; Ambrosia Family Dine and Party Centre</footer>
+
+<script>
+// Edit this list to match the real menu: [name, description, price]
+const MENU={
+ "Starters":[
+  ["Chicken Soup","Light broth with vegetables and herbs",150],
+  ["Crispy Fries","Golden fries with house dip",120],
+  ["Chicken Wings","Fried and tossed in spicy sauce",220],
+  ["Vegetable Spring Rolls","Crunchy rolls with sweet chili sauce",160]],
+ "Mains":[
+  ["Grilled Chicken Platter","Served with salad and sauteed vegetables",380],
+  ["Beef Steak","Pan seared with pepper sauce and mash",520],
+  ["Butter Chicken","Creamy tomato gravy, served with naan",340],
+  ["Grilled Fish","Fresh fish with lemon butter and rice",420]],
+ "Rice & Noodles":[
+  ["Chicken Biryani","Fragrant rice, slow cooked with spices",320],
+  ["Mixed Fried Rice","Wok tossed rice with egg and vegetables",260],
+  ["Chowmein","Stir fried noodles with chicken and vegetables",240],
+  ["Kacchi Biryani","Mutton layered with aromatic rice",480]],
+ "Desserts & Drinks":[
+  ["Chocolate Brownie","Warm brownie with ice cream",180],
+  ["Caramel Pudding","Silky custard with caramel",140],
+  ["Fresh Lime Soda","Sweet, salty or mixed",80],
+  ["Mango Lassi","Thick yogurt and ripe mango",120]]
+};
+const tabs=document.querySelector('.tabs'),list=document.getElementById('items');
+function show(cat){
+ [...tabs.children].forEach(b=>b.setAttribute('aria-selected',b.dataset.c===cat));
+ list.innerHTML=MENU[cat].map(([n,d,p])=>`<li><div class="row"><h3>${n}</h3><i></i><span>${p}</span></div><p>${d}</p></li>`).join('');
+}
+Object.keys(MENU).forEach(c=>{const b=document.createElement('button');b.textContent=c;b.dataset.c=c;b.setAttribute('role','tab');b.onclick=()=>show(c);tabs.appendChild(b)});
+show(Object.keys(MENU)[0]);
+</script>
+</body>
+</html>
